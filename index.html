@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prizma Plus</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Призма Плус</div>
+
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+    <input type="text" class="search-bar" placeholder="Пребарај..." />
+
+    <nav id="nav-links">
+        <a href="index.html">Почетна</a>
+        <a href="pricelist.html">Ценовник</a>
+        <a href="contact.html">Контакт</a>
+    </nav>
+</header>
+
+
+<main class="content">
+    <h1>Призма Плус</h1>
+    <p>Ви нудиме високо квалитетни хаха ебаго</p>
+
+    <div class="grid-categories">
+        <a href="pricelist.html#водовод" class="category-card">
+            <img src="plumbing.jpg" alt="Опрема за водовод">
+            <h2>Опрема за вовод</h2>
+        </a>
+        <a href="pricelist.html#електрика" class="category-card">
+            <img src="electrical.jpg" alt="Опрема за електрика">
+            <h2>Опрема за електрика</h2>
+        </a>
+        <a href="pricelist.html#греење" class="category-card">
+            <img src="primerce.jpeg" alt="Опрема за греење">
+            <h2>Опрема за греење</h2>
+        </a>
+        <a href="pricelist.html#железарија" class="category-card">
+            <img src="hardware.avif" alt="Железарија">
+            <h2>Железарија</h2>
+        </a>
+        <a href="pricelist.html#бои" class="category-card">
+            <img src="primerce.jpeg" alt="Бои и Лакови">
+            <h2>Бои и Лакови</h2>
+        </a>
+    </div>
+    <section class="testimonials-section">
+        <h2>Што велат нашите клиенти</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"Секогаш одлична услуга и огромен избор на производи!"</p>
+                <div class="stars">★★★★★</div>
+                <span>- Ана М.</span>
+            </div>
+            <div class="testimonial">
+                <p>"Професионален тим и супер цени. Препорачувам!"</p>
+                <div class="stars">★★★★★</div>
+                <span>- Дејан К.</span>
+            </div>
+            <div class="testimonial">
+                <p>"Најдобра продавница во Виница. Веќе 5 години купувам само од тука."</p>
+                <div class="stars">★★★★★</div>
+                <span>- Мартина С.</span>
+            </div>
+            <div class="testimonial">
+                <p>"Љубезен персонал и секогаш ми помагаат кога имам прашање. Браво!"</p>
+                <div class="stars">★★★★★</div>
+                <span>- Стефан Т.</span>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="site-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Prizma Plus. Сите права се задржани.</p>
+    </div>
+</footer>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricelist - Prizma Plus</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">Призма Плус</div>
+
+  <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+  <input type="text" class="search-bar" placeholder="Пребарај..." />
+
+  <nav id="nav-links">
+    <a href="index.html">Почетна</a>
+    <a href="pricelist.html">Ценовник</a>
+    <a href="contact.html">Контакт</a>
+  </nav>
+</header>
+
+
+<main class="content">
+  <h1>Ценовник</h1>
+
+  <section id="водовод">
+    <h2>Опрема за вовод</h2>
+    <ul class="price-list">
+      <li>cefka nekoja - 100 MKD</li>
+      <li>taj stil - 150 MKD</li>
+    </ul>
+  </section>
+
+  <section id="електрика">
+    <h2>Опрема за електрика</h2>
+    <ul class="price-list">
+      <li>prekidac - 50 MKD</li>
+      <li>sijalica  - 80 MKD</li>
+    </ul>
+  </section>
+
+  <section id="греење">
+    <h2>Опрема за греење</h2>
+    <ul class="price-list">
+      <li>radiatorce - 120 MKD</li>
+      <li>peleti davitkovski loool - 300 MKD</li>
+    </ul>
+  </section>
+
+  <section id="железарија">
+    <h2>Железарија</h2>
+    <ul class="price-list">
+      <li>sajki - 250 MKD</li>
+      <li>strafovi  - 90 MKD</li>
+    </ul>
+  </section>
+
+  <section id="бои">
+    <h2>Бои и Лакови</h2>
+    <ul class="price-list">
+      <li>bela boja- 200 MKD</li>
+      <li>crna boja - 220 MKD</li>
+    </ul>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Prizma Plus. Сите права се задржани.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.querySelector('.search-bar');
+  const items = document.querySelectorAll('.price-list li');
+
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase();
+
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(query) ? 'list-item' : 'none';
+    });
+  });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+
+</script>
+
+
+</body>
+</html>
